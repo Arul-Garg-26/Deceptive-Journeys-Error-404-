@@ -38,3 +38,6 @@ width: 140px;
   background-color: #030303;
 color: rgb(139, 0, 0);
 }
+a{
+  text-decoration: none;
+}
