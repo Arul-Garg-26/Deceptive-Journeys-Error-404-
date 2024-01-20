@@ -16,5 +16,3 @@ function display2detective(Bool){
 
 }
 
-
-window.onload = Player_Names;
