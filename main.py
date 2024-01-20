@@ -2,7 +2,7 @@ import eel
 import random
 
 #initiate eel
-eel.init('web')
+eel.init('Homepage')
 #variables, lists, etc
 theme = None
 player_names = []
@@ -47,6 +47,7 @@ def Player_Names(a, b, c, d, e, f, g, h):
 #Gives random roles to players
 @eel.expose
 def give_roles():
+    eel.init('Assigning roles')
     global roles, assign_roles, player_names, T_roles
 #Finds which roles are to be given
     if len(T_roles) > len(player_names):
@@ -73,6 +74,7 @@ def give_roles():
 #Mafia's killing and doctor's saving
 @eel.expose
 def turn(kill, save):
+    eel.init('Web')
     global killing, saving
     killing = kill
     saving = save
@@ -106,6 +108,10 @@ def Play_B():
 def Tutorial_B():
     eel.init('Tutorial')
 
+@eel.expose
+def change_url(url):
+    eel._browser.load_url(url)
+
 #Setting random theme without input
 if random.randint(0,3) == 0:
     classic_theme()
@@ -113,3 +119,5 @@ elif random.randint(0,2) == 0:
     ayodhya_theme()
 else:
     lakshadweep_theme()
+
+eel.start('homepage.html')
