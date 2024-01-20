@@ -3,6 +3,8 @@ import random
 import cgi
 
 eel.init('web')
+eel.init('Homepage')
+eel.init('Tutorial')
 form = cgi.FieldStorage()
 theme = None
 player_names = []
@@ -111,3 +113,5 @@ else:
     lakshadweep_theme()
 print(player_names)
 print(assign_roles)
+
+eel.start('homepage.html', size=(300, 200))
