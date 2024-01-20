@@ -1,13 +1,8 @@
 import eel
 import random
-import cgi
 
 #initiate eel
 eel.init('web')
-
-#accesses html field
-form = cgi.FieldStorage()
-
 #variables, lists, etc
 theme = None
 player_names = []
@@ -41,10 +36,13 @@ def lakshadweep_theme():
 
 #Assigning player names that they entered in the form
 @eel.expose
-def Player_Names():
+def Player_Names(a, b, c, d, e, f, g, h):
     global player_names
-    for i in range(1,9):
-        player_names.append(form.getvalue("P%s"%i))
+    player_names = [a, b, c, d, e, f, g, h]
+    if h == None:
+        player_names.pop(-1)
+    if g == None:
+        player_names.pop(-1)
 
 #Gives random roles to players
 @eel.expose

@@ -111,11 +111,17 @@
     <label for="input7"></label>
     <input type="text" id="input7" name="input7" placeholder="player 7 username"><br>
 
+<<<<<<< HEAD
     <label for="input8"></label>
     <input type="text" id="input8" name="input8" placeholder="player 8 username"><br>
     <a href="\Assigning roles\roles.html">
+=======
+    <label for="input8">Input 8:</label>
+    <input type="text" id="input8" name="input8"><br>
+    <!-- <a href="\Assigning roles\roles.html"> -->
+>>>>>>> f14a6b55ca505796ff30491421af6ed46c01b282
     <button type="button" onclick="submitForm()">Submit</button>
-    </a>
+    <!-- </a> -->
 </form>
 </div>
 
@@ -131,7 +137,6 @@
         var input7 = document.getElementById("input7").value;
         var input8 = document.getElementById("input8").value;
 
-
         console.log("Input 1:", input1);
         console.log("Input 2:", input2);
         console.log("Input 3:", input3);
@@ -140,6 +145,8 @@
         console.log("Input 6:", input6);
         console.log("Input 7:", input7);
         console.log("Input 8:", input8);
+
+        eel.Player_Names(input1, input2, input3, input4, input5, input6, input7, input8);
     }
 </script>
 
