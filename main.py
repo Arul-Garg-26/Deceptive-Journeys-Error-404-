@@ -50,7 +50,7 @@ def give_roles():
         l = (8-len(player_names))
         if l > 1:
             for i in range(0,l):
-                T_roles.pop((8-l))
+                T_roles.pop(j-1)
             T_roles.pop(7)
     #Assigning roles
     for i in range(len(player_names)):
@@ -70,7 +70,7 @@ def give_roles():
         w = random.randint(0, len(roles))
         eel.grab_info(roles[w])
         print(roles[w])
-        roles.pop[w]
+        roles.pop(w)
 
 @eel.expose
 def turn(kill, save):
@@ -82,7 +82,7 @@ def turn(kill, save):
         pass
         # nothing happens
     else:
-        player_names.pop[killing]
+        player_names.pop(killing)
         # player dies
         
 @eel.expose
