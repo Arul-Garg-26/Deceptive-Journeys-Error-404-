@@ -1,15 +1,11 @@
-.ButtonContainer{
-  height: 200px;
-  position: relative;
-  transform: translateY(70%);
-}
-
 .center{
   margin: 0;
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translateY(100%);
+  padding: 0%;
+  border: 1px solid black; 
 }
 
 .button1 {
@@ -17,8 +13,8 @@ background-color: rgb(83, 3, 3);
 color:rgb(174, 130, 89); 
 border: 2px solid #f6f6f6;
 display: inline;
-height: 90px;
-width: 140px;
+height: 100px;
+width: 150px;
 }
 .button1:hover {
   background-color: #070707;
@@ -30,8 +26,9 @@ text-align: center;
 background-color: rgb(83, 3, 3); 
 color:rgb(174, 130, 89); 
 border: 2px solid #f6f6f6;
-height: 90px;
-width: 140px;
+height: 100px;
+width: 350%;
+padding: 10px;
 }
 
 .button2:hover {
