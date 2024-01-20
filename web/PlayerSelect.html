@@ -86,10 +86,6 @@
 
     <script type="script/javascript" src="/eel.js">
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b15bf22a1093c9d711896463e3f21f14cb537b0e
         function Player_Names(){
             eel.Player_Names();
             eel.give_roles();
@@ -100,14 +96,24 @@
        } 
        eel.expose(grab_info)
       
-       function turn(kill, save){
-         eel.turn(kill, save)
-       }
+        function turn(kill, save){
+            eel.turn(kill, save)
+        }
   
-       function check(check){
-         eel.check(check)
-       }
-       window.onload = Player_Names;
+        function check(check){
+            eel.check(check)
+        }
+        function display2all(Bool){
+
+        }
+        eel.expose(display2all)
+
+        function display2detective(txt){
+
+        }
+        eel.expose(display2detective)
+
+        window.onload = Player_Names;
     </script>
 </body>
 </html>
