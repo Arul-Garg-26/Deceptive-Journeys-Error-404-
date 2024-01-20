@@ -2,8 +2,13 @@ import eel
 import random
 import cgi
 
+#initiate eel
 eel.init('web')
+
+#accesses html field
 form = cgi.FieldStorage()
+
+#variables, lists, etc
 theme = None
 player_names = []
 T_roles = []
@@ -45,14 +50,14 @@ def Player_Names():
 @eel.expose
 def give_roles():
     global roles, assign_roles, player_names, T_roles
-    #Finds which roles are to be given
+#Finds which roles are to be given
     if len(T_roles) > len(player_names):
         l = (8-len(player_names))
         if l > 1:
             for i in range(0,l):
                 T_roles.pop(j-1)
             T_roles.pop(7)
-    #Assigning roles
+#Assigning roles
     for i in range(len(player_names)):
         j=random.randint(-1, len(T_roles))
         x = T_roles[j-1]
@@ -64,27 +69,24 @@ def give_roles():
         ayodhya_theme()
     if theme == "Lakshadweep":
         lakshadweep_theme()
-    for i in player_names:
-        roles[i] = assign_roles[player_names.index(i)]
-    for i in range(0, len(roles)):
-        w = random.randint(0, len(roles))
-        eel.grab_info(roles[w])
-        print(roles[w])
-        roles.pop(w)
+#Runs JS function 'grab_info()'
+    eel.grab_info(player_names, assign_roles)
 
+#Mafia's killing and doctor's saving
 @eel.expose
 def turn(kill, save):
     global killing, saving
     killing = kill
     saving = save
-    
+
+#Checking if saved person that is trying to be killed
     if killing == save:
-        pass
-        # nothing happens
+        eel.display2all("No one died.")
     else:
         player_names.pop(killing)
-        # player dies
+        eel.display2all(player_names[player_names.index[killing]]+" died.")
         
+#The detective checks wether the selected player is the 'Mafia' or not.
 @eel.expose
 def check(check):
     global checking
@@ -106,7 +108,7 @@ def Play_B():
 def Tutorial_B():
     eel.init('Tutorial')
 
-#Running everything independantly
+#Setting random theme without input
 if random.randint(0,3) == 0:
     classic_theme()
 elif random.randint(0,2) == 0:
