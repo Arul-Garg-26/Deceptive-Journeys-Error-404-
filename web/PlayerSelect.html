@@ -92,19 +92,35 @@
             eel.give_roles();
         }
       
-       function grab_info(roles){
-       console.log(roles.key + " is " + roles.value);
-       }
-       eel.expose(grab_info)
+        function grab_info(roles){
+            for (var key in roles) {
+                if (roles.hasOwnProperty(key)) {
+                    console.log("Key:", key); // This prints the key
+                    console.log("Value:", roles[key]);
+
+            }
+            }
+        }
+        eel.expose(grab_info)
       
-       function turn(kill, save){
-         eel.turn(kill, save)
-       }
+        function turn(kill, save){
+            eel.turn(kill, save)
+        }
   
-       function check(check){
-         eel.check(check)
-       }
-       window.onload = Player_Names;
+        function check(check){
+            eel.check(check)
+        }
+        function display2all(Bool){
+
+        }
+        eel.expose(display2all)
+
+        function display2detective(txt){
+
+        }
+        eel.expose(display2detective)
+
+        window.onload = Player_Names;
     </script>
 </body>
 </html>
