@@ -67,13 +67,13 @@
             ;
         }
     </style>
-    <script type="script/javascript" src="/eel.js"></script>
-    <script src="script.js"></script>
+    <!-- <script type="script/javascript" src="/eel.js"></script>
+    <script src="script.js"></script> -->
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
     <h2 class="Label">Type Player Names</h2>
-        <form action="process_form.php" method="post">
+        <form action="process_form.php" id="loginForm" method="post">
             <input type="text" id="P1" name="name" required>
             <input type="text" id="P2" name="name" required>
             <input type="text" id="P3" name="name" required>
@@ -82,9 +82,79 @@
             <input type="text" id="P6" name="name" required>
             <input type="text" id="P7" name="name">
             <input type="text" id="P8" name="name">
-            <input onclick="Player_Names()" type="submit" value="Submit">
+            <button type="submit">Sumbit</button>
         </form>
-    </div>
+    </div> <script>
+        let P1 = document.getElementsByName("P1");
+        console.log(P1);
+        let P2 = document.getElementsByName("P2");
+        console.log(P2);
+        let loginForm = document.getElementById("loginForm");
+        loginForm.addEventListener("submit", (e) => {
+         e.preventDefault();
+        });
+        if (P1.value == "" || P2.value == "") {
+        alert("Ensure you input a value in both fields!");
+         } else {
+         // perform operation with form input
+         alert("This form has been successfully submitted!");
+         console.log(`This form has a username of ${P1.value}`);
+         username.value = ""; 
+         password.value = "";
+        }
+    </script> -->
+<form id="myForm">
+<label for="input1">Input 1:</label>
+    <input type="text" id="input1" name="input1"><br>
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" name="input2"><br>
+
+    <label for="input3">Input 3:</label>
+    <input type="text" id="input3" name="input3"><br>
+
+    <label for="input4">Input 4:</label>
+    <input type="text" id="input4" name="input4"><br>
+
+    <label for="input5">Input 5:</label>
+    <input type="text" id="input5" name="input5"><br>
+
+    <label for="input6">Input 6:</label>
+    <input type="text" id="input6" name="input6"><br>
+
+    <label for="input7">Input 7:</label>
+    <input type="text" id="input7" name="input7"><br>
+
+    <label for="input8">Input 8:</label>
+    <input type="text" id="input8" name="input8"><br>
+    <a href="\Assigning roles\roles.html">
+    <button type="button" onclick="submitForm()">Submit</button>
+    </a>
+</form>
+
+<script>
+    function submitForm() {
+        // Get the values of all 8 text inputs
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var input3 = document.getElementById("input3").value;
+        var input4 = document.getElementById("input4").value;
+        var input5 = document.getElementById("input5").value;
+        var input6 = document.getElementById("input6").value;
+        var input7 = document.getElementById("input7").value;
+        var input8 = document.getElementById("input8").value;
+
+        // You can store or process these values as needed
+        console.log("Input 1:", input1);
+        console.log("Input 2:", input2);
+        console.log("Input 3:", input3);
+        console.log("Input 4:", input4);
+        console.log("Input 5:", input5);
+        console.log("Input 6:", input6);
+        console.log("Input 7:", input7);
+        console.log("Input 8:", input8);
+    }
+</script>
+
 
 </body>
 </html>
