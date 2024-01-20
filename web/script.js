@@ -7,6 +7,9 @@ eel.expose(grab_info)
 function grab_info(roles){
     console.log(roles.key + " is " + roles.value);
 }
-function turn(kill, check, save){
-    eel.turn(kill, check, save)
+function turn(kill, save){
+    eel.turn(kill, save)
+}
+function check(check){
+    eel.check(check)
 }

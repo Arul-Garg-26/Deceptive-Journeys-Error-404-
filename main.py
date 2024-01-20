@@ -69,20 +69,37 @@ def give_roles():
     for i in range(0, len(roles)):
         w = random.randint(0, len(roles))
         eel.grab_info(roles[w])
+        print(roles[w])
         roles.pop[w]
 
 @eel.expose
-def turn(kill, check, save):
+def turn(kill, save):
     global killing, checking, saving
     killing = kill
-    checking = check
     saving = save
     
     if killing == save:
         pass
-    # add something later on
+    # nothing happens
     else:
         player_names.pop[killing]
+    # player dies
+        
+@eel.expose
+def check(check):
+    checking = check
+    if roles[checking] == "Mafia":
+        pass
+        #Thumbs up
+    elif roles[checking] == "Crime Boss":
+        pass
+        #Thumbs up
+    elif roles[checking] == "Drohi":
+        pass
+        #Thumbs up
+    else:
+        pass
+        #Thumbs down
 
 #Running everything independantly
 if random.randint(0,3) == 0:
