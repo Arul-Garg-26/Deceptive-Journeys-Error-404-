@@ -2,7 +2,7 @@ import eel
 import random
 
 #initiate eel
-eel.init('web')
+eel.init('Homepage')
 #variables, lists, etc
 theme = None
 player_names = []
@@ -100,6 +100,18 @@ def check(check):
     else:
         eel.display2detective(False)
 
+@eel.expose
+def Play_B():
+    eel.init('Web')
+
+@eel.expose
+def Tutorial_B():
+    eel.init('Tutorial')
+
+@eel.expose
+def change_url(url):
+    eel._browser.load_url(url)
+
 #Setting random theme without input
 if random.randint(0,3) == 0:
     classic_theme()
@@ -107,3 +119,5 @@ elif random.randint(0,2) == 0:
     ayodhya_theme()
 else:
     lakshadweep_theme()
+
+eel.start('homepage.html')
