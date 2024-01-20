@@ -90,17 +90,13 @@ def check(check):
     global checking
     checking = check
     if roles[checking] == "Mafia":
-        pass
-        #Thumbs up
+        eel.display2detective(True)
     elif roles[checking] == "Crime Boss":
-        pass
-        #Thumbs up
+        eel.display2detective(True)
     elif roles[checking] == "Drohi":
-        pass
-        #Thumbs up
+        eel.display2detective(True)
     else:
-        pass
-        #Thumbs down
+        eel.display2detective(False)
 
 @eel.expose
 def Play_B():
@@ -117,5 +113,3 @@ elif random.randint(0,2) == 0:
     ayodhya_theme()
 else:
     lakshadweep_theme()
-print(player_names)
-print(assign_roles)
