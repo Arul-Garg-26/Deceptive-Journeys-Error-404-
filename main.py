@@ -8,34 +8,35 @@ theme = None
 player_names = []
 T_roles = []
 assign_roles =[]
+roles = {}
+killing = None
+checking = None
+saving = None
 
 #Setting the theme to Classic
 @eel.expose
 def classic_theme():
-    global theme
-    global T_roles
+    global theme, T_roles
     theme = "Classic"
     T_roles = ["Mafia", "Detective", "Doctor", "Villager", "Villager", "Villager", "Mafia", "Villager"]
 
 #Setting the theme to Ayodhya
 @eel.expose
 def ayodhya_theme():
-    global theme
-    global T_roles
+    global theme, T_roles
     theme = "Ayodhya"
     T_roles = ["Drohi", "Gusmath", "Vaidya", "Gramvasi", "Gramvasi", "Gramvasi", "Drohi", "Gramvasi"]
 
 #Setting the theme to Lakshadweep 
 @eel.expose
 def lakshadweep_theme():
-    global theme
-    global T_roles
+    global theme, T_roles
     theme = "Lakshadweep"
     T_roles = ["Crime Lord", "Inspector", "Chemist", "Fisherman", "Fisherman", "Fisherman", "Crime Lord", "Fisherman"]
 
 #Assigning player names that they entered in the form
 @eel.expose
-def Player_Names():
+def player_names():
     global player_names
     for i in range(1,9):
         player_names.append(form.getvalue("P_%s"%i))
@@ -43,9 +44,7 @@ def Player_Names():
 #Gives random roles to players
 @eel.expose
 def give_roles():
-    global assign_roles
-    global player_names
-    global T_roles
+    global roles, assign_roles, player_names, T_roles
     #Finds which roles are to be given
     if len(T_roles) > len(player_names):
         l = (8-len(player_names))
@@ -65,6 +64,25 @@ def give_roles():
         ayodhya_theme()
     if theme == "Lakshadweep":
         lakshadweep_theme()
+    for i in player_names:
+        roles[i] = assign_roles[player_names.index(i)]
+    for i in range(0, len(roles)):
+        w = random.randint(0, len(roles))
+        eel.grab_info(roles[w])
+        roles.pop[w]
+
+@eel.expose
+def turn(kill, check, save):
+    global killing, checking, saving
+    killing = kill
+    checking = check
+    saving = save
+    
+    if killing == save:
+        pass
+    # add something later on
+    else:
+        player_names.pop[killing]
 
 #Running everything independantly
 if random.randint(0,3) == 0:
@@ -73,7 +91,5 @@ elif random.randint(0,2) == 0:
     ayodhya_theme()
 else:
     lakshadweep_theme()
-Player_Names()
-give_roles()
 print(player_names)
 print(assign_roles)
