@@ -15,6 +15,3 @@ eel.expose(display2detective);
 function display2detective(Bool){
 
 }
-
-
-window.onload = Player_Names;
