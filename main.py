@@ -74,19 +74,20 @@ def give_roles():
 
 @eel.expose
 def turn(kill, save):
-    global killing, checking, saving
+    global killing, saving
     killing = kill
     saving = save
     
     if killing == save:
         pass
-    # nothing happens
+        # nothing happens
     else:
         player_names.pop[killing]
-    # player dies
+        # player dies
         
 @eel.expose
 def check(check):
+    global checking
     checking = check
     if roles[checking] == "Mafia":
         pass

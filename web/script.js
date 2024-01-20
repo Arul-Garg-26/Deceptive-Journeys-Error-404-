@@ -1,6 +1,6 @@
 
 function Player_Names(){
-    eel.player_names();
+    eel.Player_Names();
     eel.give_roles();
 }
 eel.expose(grab_info)
