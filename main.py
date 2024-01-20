@@ -36,7 +36,7 @@ def lakshadweep_theme():
 
 #Assigning player names that they entered in the form
 @eel.expose
-def player_names():
+def Player_Names():
     global player_names
     for i in range(1,9):
         player_names.append(form.getvalue("P_%s"%i))
