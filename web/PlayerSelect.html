@@ -126,9 +126,9 @@
 
     <label for="input8">Input 8:</label>
     <input type="text" id="input8" name="input8"><br>
-    <a href="\Assigning roles\roles.html">
+    <!-- <a href="\Assigning roles\roles.html"> -->
     <button type="button" onclick="submitForm()">Submit</button>
-    </a>
+    <!-- </a> -->
 </form>
 
 <script>
@@ -143,7 +143,6 @@
         var input7 = document.getElementById("input7").value;
         var input8 = document.getElementById("input8").value;
 
-        // You can store or process these values as needed
         console.log("Input 1:", input1);
         console.log("Input 2:", input2);
         console.log("Input 3:", input3);
@@ -152,6 +151,8 @@
         console.log("Input 6:", input6);
         console.log("Input 7:", input7);
         console.log("Input 8:", input8);
+
+        eel.Player_Names(input1, input2, input3, input4, input5, input6, input7, input8);
     }
 </script>
 
