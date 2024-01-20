@@ -9,6 +9,19 @@ body {
     justify-content: center;
     align-items: center;
     color: #ffffff; /* Set the text color to be visible against the background */
-    font-family: Arial, sans-serif;
+    font-family: 'Amatic SC', sans-serif;
     text-align: center;
+    display: block;
+  }
+h1{
+    font-size: 5em;
+}
+p {
+    font-size: 2em;
+}
+.sub-container{
+    width: 900px;
+}
+.bottom-button {
+    margin-bottom: 20px; /* Adjust the margin as needed */
   }
