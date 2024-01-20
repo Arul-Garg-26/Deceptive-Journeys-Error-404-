@@ -79,7 +79,7 @@ h2 {
     width: 150px;
     font-size: 2em;
     transform: translateX(-100px);
-    transform: translateY(-130px);
+    transform: translateY(-120px);
   }
 .bottom-button:hover {
   background-color: #070707;
