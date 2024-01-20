@@ -9,11 +9,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #191715;
+            background-color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 400px;
             margin: 0;
         }
 
@@ -23,10 +23,13 @@
             width: 65%;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            margin-top: 500px;
+            display: block;
         }
 
-        h2 {
-            color: #333;
+        h1 {
+            color: white; 
             text-align: center;
         }
 
@@ -40,7 +43,7 @@
             margin-bottom: 10px;
         }
 
-        input, textarea {
+        input {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -50,7 +53,7 @@
         }
 
         input[type="submit"] {
-            background-color: #000000;
+            background-color: #fcf9f9;
             color: #edecec;
             padding: 10px 15px;
             border: none;
@@ -62,78 +65,63 @@
         input[type="submit"]:hover {
             background-color: #5479ff;
         }
-        .Label{
-            color: antiquewhite
-            ;
+        button{
+        margin-bottom: 20px; 
+        background-color: rgb(83, 3, 3); 
+        color:rgb(174, 130, 89); 
+        border: 2px solid #030303;
+        display: inline;
+        height: 50px;
+        width: 100px;
+        text-decoration: none;
+        }
+        h1{
+        font-size: 2em; 
+        color: #333; 
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
         }
     </style>
-    <!-- <script type="script/javascript" src="/eel.js"></script>
+<!-- <script type="script/javascript" src="/eel.js"></script>
     <script src="script.js"></script> -->
 </head>
-<body>
-    <!-- <div class="container">
-    <h2 class="Label">Type Player Names</h2>
-        <form action="process_form.php" id="loginForm" method="post">
-            <input type="text" id="P1" name="name" required>
-            <input type="text" id="P2" name="name" required>
-            <input type="text" id="P3" name="name" required>
-            <input type="text" id="P4" name="name" required>
-            <input type="text" id="P5" name="name" required>
-            <input type="text" id="P6" name="name" required>
-            <input type="text" id="P7" name="name">
-            <input type="text" id="P8" name="name">
-            <button type="submit">Sumbit</button>
-        </form>
-    </div> <script>
-        let P1 = document.getElementsByName("P1");
-        console.log(P1);
-        let P2 = document.getElementsByName("P2");
-        console.log(P2);
-        let loginForm = document.getElementById("loginForm");
-        loginForm.addEventListener("submit", (e) => {
-         e.preventDefault();
-        });
-        if (P1.value == "" || P2.value == "") {
-        alert("Ensure you input a value in both fields!");
-         } else {
-         // perform operation with form input
-         alert("This form has been successfully submitted!");
-         console.log(`This form has a username of ${P1.value}`);
-         username.value = ""; 
-         password.value = "";
-        }
-    </script> -->
+<div class="container"  style="border: 3px solid black;">
+    
 <form id="myForm">
-<label for="input1">Input 1:</label>
-    <input type="text" id="input1" name="input1"><br>
-    <label for="input2">Input 2:</label>
-    <input type="text" id="input2" name="input2"><br>
+    <label for="input1"></label>
+    <input type="text" id="input1" name="input1" placeholder="player 1 username"><br>
+    
+    <label for="input2"></label>
+    <input type="text" id="input2" name="input2" placeholder="player 2 username"><br>
 
-    <label for="input3">Input 3:</label>
-    <input type="text" id="input3" name="input3"><br>
+    <label for="input3"></label>
+    <input type="text" id="input3" name="input3" placeholder= "player 3 username"><br>
 
-    <label for="input4">Input 4:</label>
-    <input type="text" id="input4" name="input4"><br>
+    <label for="input4"></label>
+    <input type="text" id="input4" name="input" placeholder="player 4 username"><br>
 
-    <label for="input5">Input 5:</label>
-    <input type="text" id="input5" name="input5"><br>
+    <label for="input5"></label>
+    <input type="text" id="input5" name="input5" placeholder="player 5 username"><br>
 
-    <label for="input6">Input 6:</label>
-    <input type="text" id="input6" name="input6"><br>
+    <label for="input6"></label>
+    <input type="text" id="input6" name="input6" placeholder="player 6 username"><br>
 
-    <label for="input7">Input 7:</label>
-    <input type="text" id="input7" name="input7"><br>
+    <label for="input7"></label>
+    <input type="text" id="input7" name="input7" placeholder="player 7 username"><br>
 
-    <label for="input8">Input 8:</label>
-    <input type="text" id="input8" name="input8"><br>
+    <label for="input8"></label>
+    <input type="text" id="input8" name="input8" placeholder="player 8 username"><br>
     <a href="\Assigning roles\roles.html">
     <button type="button" onclick="submitForm()">Submit</button>
     </a>
 </form>
+</div>
 
 <script>
     function submitForm() {
-        // Get the values of all 8 text inputs
+        
         var input1 = document.getElementById("input1").value;
         var input2 = document.getElementById("input2").value;
         var input3 = document.getElementById("input3").value;
@@ -143,7 +131,7 @@
         var input7 = document.getElementById("input7").value;
         var input8 = document.getElementById("input8").value;
 
-        // You can store or process these values as needed
+
         console.log("Input 1:", input1);
         console.log("Input 2:", input2);
         console.log("Input 3:", input3);
