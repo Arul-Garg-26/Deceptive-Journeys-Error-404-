@@ -1,9 +1,13 @@
+body{
+  background-color: #191715;
+}
 .center{
   margin: 0;
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translateY(100%);
+  transform: translateX(-80px);
   padding: 0%;
   border: 1px solid black; 
 }
@@ -25,7 +29,7 @@ width: 150px;
 text-align: center;
 background-color: rgb(83, 3, 3); 
 color:rgb(174, 130, 89); 
-border: 2px solid #f6f6f6;
+border: 2px solid #090000;
 height: 100px;
 width: 350%;
 padding: 10px;
