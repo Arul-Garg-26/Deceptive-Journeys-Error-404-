@@ -3,8 +3,6 @@ import random
 import cgi
 
 eel.init('web')
-eel.init('Homepage')
-eel.init('Tutorial')
 form = cgi.FieldStorage()
 theme = None
 player_names = []
@@ -104,6 +102,14 @@ def check(check):
         pass
         #Thumbs down
 
+@eel.expose
+def Play_B():
+    eel.init('Web')
+
+@eel.expose
+def Tutorial_B():
+    eel.init('Tutorial')
+
 #Running everything independantly
 if random.randint(0,3) == 0:
     classic_theme()
@@ -113,5 +119,3 @@ else:
     lakshadweep_theme()
 print(player_names)
 print(assign_roles)
-
-eel.start('homepage.html', size=(300, 200))
