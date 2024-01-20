@@ -31,7 +31,7 @@ def lakshadweep_theme():
     global theme
     global T_roles
     theme = "Lakshadweep"
-    T_roles = ["Mafia", "Inspector", "Chemist", "Fisherman", "Fisherman", "Fisherman", "Mafia", "Fisherman"]
+    T_roles = ["Crime Lord", "Inspector", "Chemist", "Fisherman", "Fisherman", "Fisherman", "Crime Lord", "Fisherman"]
 
 #Assigning player names that they entered in the form
 @eel.expose
