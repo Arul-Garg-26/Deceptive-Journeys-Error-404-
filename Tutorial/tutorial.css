@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Backround for tutorial.png'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+    background-size: cover; /* This property ensures that the background image covers the entire viewport */
+    background-position: center; /* This property centers the background image */
+    height: 100vh; /* This ensures that the background takes up the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Set the text color to be visible against the background */
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
