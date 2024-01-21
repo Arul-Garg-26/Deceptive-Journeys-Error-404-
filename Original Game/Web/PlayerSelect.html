@@ -145,6 +145,18 @@
 </div>
 
 <script>
+    function playerNamesFunction(a, b, c, d, e, f, g, h) {
+        playerNames = [a, b, c, d, e, f, g, h];
+        if (h === null) {
+            playerNames.pop();
+        }
+        if (g === null) {
+            playerNames.pop();
+        }
+        temp = giveRoles();
+        givingRoles(temp);
+}
+
     function submitForm() {
         
         var input1 = document.getElementById("input1").value;
@@ -165,7 +177,7 @@
         console.log("Input 7:", input7);
         console.log("Input 8:", input8);
 
-        eel.Player_Names(input1, input2, input3, input4, input5, input6, input7, input8);
+        playerNamesFunction(input1, input2, input3, input4, input5, input6, input7, input8);
     }
 </script>
 
