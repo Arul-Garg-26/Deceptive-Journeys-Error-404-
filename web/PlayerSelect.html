@@ -6,6 +6,7 @@
     <link rel ="icon" type="image/png" href="Screenshot 2024-01-20 152856.png">
     <title>Player Select</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <script src="main.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,19 +14,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 400px;
             margin: 0;
-            padding: 0;
-            background-image: url('Backround for tutorial.png');
-            background-size: cover; 
-            background-position: center;
-            color: #ffffff; 
-            text-align: center;
         }
-      
-    .content {
-      max-width: 600px;
-    }
 
         .container {
             background-color: #570202;
@@ -77,15 +68,12 @@
         }
         button{
         margin-bottom: 20px; 
-        background-color: rgb(255, 238, 107); 
+        background-color: rgb(83, 3, 3); 
         color:rgb(174, 130, 89); 
         border: 2px solid #030303;
         display: inline;
         height: 50px;
         width: 100px;
-        }
-        button:hover{
-            background-color: lightskyblue;
         }
         a{
             text-decoration: none;
@@ -99,21 +87,15 @@
         margin-bottom: 10px;
         display: block;
         }
-        a{
-            text-decoration: none;
-            font-size: 1.2em;
-        }
     </style>
-
-    <script type="script/javascript" src="/eel.js"></script>
+    <script type="script/javascript"></script>
 </head>
 <body>
-
 <!-- <script type="script/javascript" src="/eel.js"></script>
     <script src="script.js"></script> -->
 </head>
-<div class="container" class="content" style="border: 3px solid black;">
-
+<div class="container"  style="border: 3px solid black;">
+    
 <form id="myForm">
     <label for="input1"></label>
     <input type="text" id="input1" name="input1" placeholder="player 1 username" required><br>
@@ -122,10 +104,17 @@
     <input type="text" id="input2" name="input2" placeholder="player 2 username" required><br>
 
     <label for="input3"></label>
+<<<<<<< HEAD
     <input type="text" id="input3" name="input3" placeholder= "player 3 username" required><br>
 
     <label for="input4"></label>
     <input type="text" id="input4" name="input" placeholder="player 4 username" required ><br>
+=======
+    <input type="text" id="input3" name="input3" placeholder="player 3 username"><br>
+
+    <label for="input4"></label>
+    <input type="text" id="input4" name="input4" placeholder="player 4 username"><br>
+>>>>>>> 96ef53d4f71762672bcb9d863865f05925f37016
 
     <label for="input5"></label>
     <input type="text" id="input5" name="input5" placeholder="player 5 username" required><br>
@@ -135,12 +124,13 @@
 
     <label for="input7"></label>
     <input type="text" id="input7" name="input7" placeholder="player 7 username"><br>
-
     <label for="input8"></label>
     <input type="text" id="input8" name="input8" placeholder="player 8 username"><br>
     <a href="\Assigning roles\roles.html">
+
+    <!-- <a href="\Assigning roles\roles.html"> -->
     <button type="button" onclick="submitForm()">Submit</button>
-    </a>
+    <!-- </a> -->
 </form>
 </div>
 
@@ -165,7 +155,7 @@
         console.log("Input 7:", input7);
         console.log("Input 8:", input8);
 
-        eel.Player_Names(input1, input2, input3, input4, input5, input6, input7, input8);
+        playerNamesFunction(input1, input2, input3, input4, input5, input6, input7, input8);
     }
 </script>
 

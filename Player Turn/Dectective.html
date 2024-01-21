@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="tutorial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+<style>
+.dropbtn {
+transform: translateY(100%);
+  background-color: #472aae;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: 5px;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #000000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+body {
+      background: linear-gradient(to right, #010101, #110346);
+      margin: 0; 
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white; 
+      font-size: 24px;
+    }
+</style>
+</head>
+<body style="background-color:white;">
+    <h1>You Are The DETECTIVE</h1>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Choose Who to Spy</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a>Player 1 </a>
+    <a>Player 2 </a>
+    <a>Player 3 </a>
+    <a>Player 4 </a>
+    <a>Player 5 </a>
+    <a>Player 6 </a>
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
