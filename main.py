@@ -2,7 +2,7 @@ import eel
 import random
 
 #initiate eel
-eel.init('web')
+eel.init('Web')
 #variables, lists, etc
 theme = None
 player_names = []
@@ -97,14 +97,6 @@ def check(check):
         eel.display2detective(True)
     else:
         eel.display2detective(False)
-
-@eel.expose
-def Play_B():
-    eel.init('Web')
-
-@eel.expose
-def Tutorial_B():
-    eel.init('Tutorial')
 
 #Setting random theme without input
 if random.randint(0,3) == 0:
