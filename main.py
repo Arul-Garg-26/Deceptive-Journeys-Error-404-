@@ -67,8 +67,11 @@ def give_roles():
         ayodhya_theme()
     if theme == "Lakshadweep":
         lakshadweep_theme()
-#Runs JS function 'grab_info()'
-    eel.grab_info(player_names, assign_roles)
+
+    for i in range(0, len(player_names)):
+        roles[player_names[i]] = assign_roles[i]
+    return(player_names)
+
 
 #Mafia's killing and doctor's saving
 @eel.expose

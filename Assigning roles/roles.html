@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="roles.css">
-    <script type="text/javascript" src="/eel.js"></script>
+    <script src="main.js"></script>
     <!-- <script src="web\script.js"></script> -->
 </head>
 <body>
@@ -37,22 +37,12 @@
     
     
     <script>
-        
-        function Player_Names(){
-        eel.Player_Names();
-        eel.give_roles();
-      }
 
-        eel.expose(grab_info)
-        function grab_info(Arr_names, Arr_roles){
-        const NamesArray = Arr_names;
-        const RolesArray = Arr_roles;
-        var i = Math.floor(Math.random()*NamesArray);
-        var Name = NamesArray[i];
-        var Role = RolesArray[i];
-        console.log(Role, Name);
-        document.getElementsById("Name").innerHTML = Name;
-        document.getElementsById("role").innerHTML = Role;
+        function givingRoles(dict){
+            i = Math.floor[Math.random() * temp.key(dictionary).length]
+            console.log(i)
+            document.getElementsById("Name").innerHTML = Name;
+            document.getElementsById("role").innerHTML = Role;
      }
      
     </script>
